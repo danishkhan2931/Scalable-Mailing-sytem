@@ -27,8 +27,8 @@ class SendToServerThread implements runable
     //get function return EmailDao Data  from common data host  
     list = get(address_of_common_to_all_server_data_host).EmailDao.getEmailData(serverId, threadId, currentIndex ,db);
     if(list!=NULL)currentIndex++;
-    int i;
-    for(i=0,i<list.size();i++) {
+ 
+    for( int i=0,i<list.size();i++) {
    	  //send message
    	  SMTPMailSender.getInstance().sendEmail(list[i].getSender(), list[i].getReciever(), list[i].getMessage());
     }
