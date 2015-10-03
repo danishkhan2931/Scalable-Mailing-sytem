@@ -1,6 +1,7 @@
 # Scalable-Mailing-sytem
 
-Common data to all server
+Common data to all server:
+
 1) the data base where all mailing  data is present.
 2)an integer which tells the number of server connected  integer is in EmailDAO class 
 3)an Array list which list which stores an integer corresponding to the segment covered this is in EmailDAO class 
