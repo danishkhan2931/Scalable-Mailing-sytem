@@ -9,16 +9,18 @@ class EmailDAO {
   ArrayList<int >totalsegmentcovered;
   //to get current status info
   public synchronized Info getInfo () {
-  	return new Info(noOfServer, q.size());
   	noOfServer++;
+  	return new Info(noOfServer, q.size());
   }
 
   EmailDAO obj = null;
   private EmailDAO() {
   }
-  static EmailDAO getInstance() {
-    if(obj==null)
-      return new EmailDAO();
+  public static EmailDAO getInstance() {
+    if(obj==null) {
+      obj = new EmailDAO();
+      return obj;
+    }
     else
       return obj;
   }
