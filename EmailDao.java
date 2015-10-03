@@ -26,7 +26,7 @@ class EmailDAO {
   }
   //method to fetch data and return as an ArrayList
   public ArrayList<Mail > getEmailData(int serverId, int threadId, int currentIndex,ConnectionCentralDB db) {
-  	int total_segment_covered;
+    int total_segment_covered;
     if(currentIndex>0) {
     	total_segment_covered = totalsegmentcovered[currentIndex-1];
     	if(totalsegmentcovered.size()<currentIndex+1) {
